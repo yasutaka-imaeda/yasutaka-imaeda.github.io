@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+h1 {
+  text-align: center;
+  color: greenyellow;
+}
+
+.ani-text1 {
+  color: red;
+  font-weight: bold;
+}
+
+@keyframes move {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(80%);
+  }
+}
+
+.ani-text1 {
+  animation: move 5s reverse linear infinite;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.board-tytle {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.board-box {
+  background-color: tomato;
+  width: 70%;
+}
+.input-set {
+  display: flex;
+  justify-content: center;
+}
