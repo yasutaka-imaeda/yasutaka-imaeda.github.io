@@ -1,26 +1,76 @@
 @charset "utf-8";
 
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+
 h1 {
   text-align: center;
   color: greenyellow;
 }
 
-.ani-text1 {
-  color: red;
-  font-weight: bold;
+.header-form {
+  float: left;
+  position: absolute;
+  top: 35px;
+  left: 83%;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.5;
+}
+.btn:active {
+  position: absolute;
+  top: 37px;
+}
+
+.header-container {
+  display: block;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap; */
+}
+.box {
+  width: 10%;
+  height: 50px;
+  background: white;
+  float: left;
+  z-index: 10;
+  position: relative;
 }
 
 @keyframes move {
   0% {
-    transform: none;
+    /* transform: none; */
+    transform: translateX(-100%);
+    /* position: relative;
+    left: 0px; */
   }
   100% {
-    transform: translateX(80%);
+    transform: translateX(100%);
+    /* transform: translateX(100%) translateX(-696px); */
+    /* transform: translateX(calc(100% - 696px)); */
+    /* position: relative;
+    right: 0px; */
   }
 }
 
 .ani-text1 {
   animation: move 5s reverse linear infinite;
+  color: red;
+  font-weight: bold;
+  font-size: 24px;
+  width: 80%;
+  float: left;
+  text-align: center;
+  padding: 0;
 }
 
 .container {
