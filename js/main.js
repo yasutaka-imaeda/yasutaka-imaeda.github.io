@@ -3,20 +3,29 @@
 {
 
   document.getElementById('input-button').addEventListener('click', () => {
-    const li = document.querySelector('li');
+
+    const list = document.querySelectorAll('li')
+    const div = document.createElement('div');
+    const li = document.createElement('li');
+    const ul = document.querySelector('ul');
     var gbtn = document.createElement('button');
     var bbtn = document.createElement('button');
     gbtn.innerHTML = 'good';
     gbtn.id = 'good-btn';
     bbtn.innerHTML = 'bad';
     bbtn.id = 'bad-btn';
-
+    
     const text = document.querySelector('input');
 
+    if (list.length > 5) {
+      ul.removeChild(ul.children[0]);
+    }
+
     li.textContent = text.value;
-    document.querySelector('ul').appendChild(li);
-    document.querySelector('ul').appendChild(gbtn);
-    document.querySelector('ul').appendChild(bbtn);
+    ul.appendChild(li);
+    li.appendChild(div)
+    div.appendChild(gbtn);
+    div.appendChild(bbtn);
 
     text.value = '';
     text.focus();
@@ -26,7 +35,6 @@
     e.preventDefault();
     console.log('submit');
   });
-
 
 
 }
